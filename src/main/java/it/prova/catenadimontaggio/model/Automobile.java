@@ -3,6 +3,7 @@ package it.prova.catenadimontaggio.model;
 import java.util.Date;
 
 public class Automobile {
+	private Long id;
 	private String modello;
 	private String telaio;
 	private Date dataProduzione;
@@ -10,8 +11,9 @@ public class Automobile {
 	public Automobile() {
 	}
 
-	public Automobile(String modello, String telaio, Date dataProduzione) {
+	public Automobile(Long id, String modello, String telaio, Date dataProduzione) {
 		super();
+		this.id=id;
 		this.modello = modello;
 		this.telaio = telaio;
 		this.dataProduzione = dataProduzione;
@@ -39,6 +41,14 @@ public class Automobile {
 
 	public void setDataProduzione(Date dataProduzione) {
 		this.dataProduzione = dataProduzione;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	@Override

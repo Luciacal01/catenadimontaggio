@@ -1,19 +1,31 @@
 package it.prova.catenadimontaggio.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SlotCatenaDiMontaggio {
+	private Long id;
 	private String brand;
 	private String country;
-	private List<Automobile> automobili;
+	private List<Automobile> automobili = new ArrayList<Automobile>();
 	
 	public SlotCatenaDiMontaggio() {
 	}
 
-	public SlotCatenaDiMontaggio(String brand, String country) {
+	public SlotCatenaDiMontaggio(Long id, String brand, String country) {
 		super();
+		this.id=id;
 		this.brand = brand;
 		this.country = country;
+	}
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getBrand() {
